@@ -4,3 +4,38 @@
   "Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 "
 2025-02-26 15:05:00,356 - INFO - Starting.
 2025-02-26 15:05:00,356 - INFO - Loading Data.
+2025-02-26 15:14:30,426 - INFO - Data loaded in 0.0 hours 9.0 minutes.
+2025-02-26 15:14:30,492 - INFO - Training Started.
+/home/cike/diff_adhoc/Dic/envs/overcooked/overcooked_ai
+/home/cike/marl_collector/src/envs/overcooked/overcooked_ai
+pygame 2.6.1 (SDL 2.28.4, Python 3.7.12)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Epoch 1/100:   0%|          | 0/26 [00:00<?, ?it/s]Epoch 1/100:   0%|          | 0/26 [00:21<?, ?it/s]
+Traceback (most recent call last):
+  File "train_pp.py", line 236, in <module>
+    model_save_path=config["model_save_path"])
+  File "train_pp.py", line 40, in train_model
+    loss_dt = trainer.train(episodes_data, train_steps=dt_train_steps, device=device, max_ep_len=episodes_data["state"].size(1), max_len=K, goal_steps=goal_steps)
+  File "/home/cike/diff_adhoc/Dic/Trainer/Trainer.py", line 145, in train
+    action_loss, total_goal_loss, mie_loss, mse_loss_r, mse_loss_g = self.train_step(episodes_data, device, max_ep_len, max_len, goal_steps)
+  File "/home/cike/diff_adhoc/Dic/Trainer/Trainer.py", line 223, in train_step
+    obs, actions, goal, timesteps, attention_mask=attention_mask,
+  File "/home/cike/diff_adhoc/Dic/Networks/dt_models/decision_transformer.py", line 99, in forward
+    attention_mask=stacked_attention_mask,
+  File "/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cike/diff_adhoc/Dic/Networks/dt_models/trajectory_gpt2.py", line 741, in forward
+    output_attentions=output_attentions,
+  File "/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cike/diff_adhoc/Dic/Networks/dt_models/trajectory_gpt2.py", line 309, in forward
+    output_attentions=output_attentions,
+  File "/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cike/diff_adhoc/Dic/Networks/dt_models/trajectory_gpt2.py", line 221, in forward
+    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
+  File "/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/transformers/modeling_utils.py", line 1731, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 270.00 MiB (GPU 0; 15.90 GiB total capacity; 8.75 GiB already allocated; 40.75 MiB free; 8.88 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
