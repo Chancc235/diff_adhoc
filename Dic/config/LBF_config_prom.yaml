@@ -1,0 +1,32 @@
+env: lbf
+type: LBF
+
+device: cuda
+batch_size: 4096
+weight_decay: 0.00001
+clip_value: 2
+num_agents: 2
+
+# train_model function
+num_epochs: 100
+save_interval: 2
+model_save_path: models
+test_interval: 2
+
+# network
+state_dim: 2
+act_dim: 6
+max_ep_len: 51
+
+# DT
+dt_embed_dim: 64
+K: 10
+n_layer: 3
+n_head: 1
+dt_activation_function: relu
+dt_dropout: 0.1
+warmup_steps: 10
+dt_weight_decay: 0.0001
+lr: 0.001
+
+train_data_path: data/LBF_episodes_datas_rtg.pt

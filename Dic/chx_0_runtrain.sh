@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 nohup python train_lbf.py > output0.log 2>&1 &

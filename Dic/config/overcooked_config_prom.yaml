@@ -1,0 +1,32 @@
+env: overcooked
+type: overcooked
+
+device: cuda
+batch_size: 32768
+weight_decay: 0.00001
+clip_value: 2
+num_agents: 2
+
+# train_model function
+num_epochs: 100
+save_interval: 2
+model_save_path: models
+test_interval: 2
+
+# network
+state_dim: 79
+act_dim: 6
+max_ep_len: 401
+
+# DT
+dt_embed_dim: 32
+K: 10
+n_layer: 2
+n_head: 1
+dt_activation_function: relu
+dt_dropout: 0.999
+warmup_steps: 50
+dt_weight_decay: 0.00001
+dt_lr: 0.01
+
+train_data_path: data/overcooked_episodes_datas_rtg_new3.pt

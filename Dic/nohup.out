@@ -1,0 +1,14 @@
+/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/gym/logger.py:34: UserWarning: [33mWARN: Overriding environment Overcooked-v0[0m
+  warnings.warn(colorize("%s: %s" % ("WARN", msg % args), "yellow"))
+/home/cike/diff_adhoc/Dic/envs/overcooked/overcooked_ai
+/home/cike/marl_collector/src/envs/overcooked/overcooked_ai
+pygame 2.6.1 (SDL 2.28.4, Python 3.7.12)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Loaded MediumLevelPlanner from /home/cike/marl_collector/src/envs/overcooked/overcooked_ai/overcooked_ai_py/data/planners/surrounding_am.pkl
+testing:   0%|          | 0/5 [00:00<?, ?it/s]testing:  20%|██        | 1/5 [00:01<00:07,  1.87s/it]testing:  40%|████      | 2/5 [00:03<00:05,  1.91s/it]testing:  60%|██████    | 3/5 [00:05<00:03,  1.96s/it]testing:  80%|████████  | 4/5 [00:07<00:01,  1.91s/it]testing: 100%|██████████| 5/5 [00:09<00:00,  1.90s/it]testing: 100%|██████████| 5/5 [00:09<00:00,  1.91s/it]
+0
+0
+0
+0
+0
+Average Return: 0.0

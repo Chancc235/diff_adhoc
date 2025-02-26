@@ -1,0 +1,6 @@
+/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/gym/logger.py:34: UserWarning: [33mWARN: Overriding environment Overcooked-v0[0m
+  warnings.warn(colorize("%s: %s" % ("WARN", msg % args), "yellow"))
+/home/cike/anaconda3/envs/pymarl2/lib/python3.7/site-packages/transformers/configuration_utils.py:337: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  "Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 "
+2025-02-26 15:05:00,356 - INFO - Starting.
+2025-02-26 15:05:00,356 - INFO - Loading Data.

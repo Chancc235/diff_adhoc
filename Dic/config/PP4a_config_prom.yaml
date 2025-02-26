@@ -1,0 +1,32 @@
+env: stag_hunt
+type: PP4a
+
+device: cuda
+batch_size: 4096
+weight_decay: 0.00001
+clip_value: 2
+num_agents: 4
+
+# train_model function
+num_epochs: 100
+save_interval: 2
+model_save_path: models
+test_interval: 2
+
+# network
+state_dim: 75
+act_dim: 5
+max_ep_len: 201
+
+# DT
+dt_embed_dim: 128
+K: 20
+n_layer: 4
+n_head: 2
+dt_activation_function: relu
+dt_dropout: 0.1
+warmup_steps: 50
+dt_weight_decay: 0.00001
+dt_lr: 0.00001
+
+train_data_path: data/PP4a_episodes_datas_rtg_new.pt

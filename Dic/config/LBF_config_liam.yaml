@@ -1,0 +1,25 @@
+env: lbf
+type: LBF
+device: cuda
+state_dim: 21
+act_dim: 6
+num_agents: 2
+z_dim: 256
+output_dim: 64
+hidden_dim: 256
+max_ep_len: 51
+update_freq: 2
+
+lr: 0.0001
+weight_decay: 0.0001
+gamma: 0.95  # 折扣因子
+beta: 0.2   # a2c前的系数
+alpha: 0.1  # policy_loss中log前的系数
+sita: 0.1  # entropy前的系数
+batch_size: 16384
+num_epochs: 100
+
+train_data_path: data/LBF_episodes_datas_rtg.pt
+test_interval: 2
+save_interval: 10
+device: "cuda"

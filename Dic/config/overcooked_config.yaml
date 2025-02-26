@@ -1,0 +1,43 @@
+env: overcooked
+type: overcooked
+
+device: cuda
+batch_size: 32768
+lr: 0.00001
+weight_decay: 0.0001
+alpha: 0.1   # 预测r的MSE的权重
+beta: 100   # MIE第一项的权重
+gama: 100   # MIE第二项的权重
+sigma: 0.001 # goal部分的总权重
+clip_value: 2
+num_agents: 2
+goal_steps: 2
+
+# train_model function
+num_epochs: 100
+save_interval: 2
+model_save_path: models
+test_interval: 2
+
+# network
+state_dim: 79
+embed_dim: 16
+TeammateEncoder_num_heads: 2
+goal_dim: 79
+act_dim: 6
+max_ep_len: 401
+
+# DT
+dt_embed_dim: 16
+K: 5
+n_layer: 1
+n_head: 1
+dt_activation_function: relu
+dt_dropout: 0.5
+warmup_steps: 10
+dt_weight_decay: 0.0001
+dt_train_steps: 1
+
+# train_data_path: data/PP4a_episodes_datas.pt
+# train_data_path: data/overcooked_wo_aug.pt
+train_data_path: data/overcooked_episodes_datas_rtg_new3.pt

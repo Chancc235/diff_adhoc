@@ -1,0 +1,25 @@
+env: stag_hunt
+type: PP4a
+device: cuda
+state_dim: 75
+act_dim: 5
+num_agents: 4
+z_dim: 128
+output_dim: 64
+hidden_dim: 128
+max_ep_len: 201
+update_freq: 20
+
+lr: 0.001
+weight_decay: 0.0001
+gamma: 0.95  # 折扣因子
+beta: 0.5   # a2c前的系数
+alpha: 0.1  # policy_loss中log前的系数
+sita: 0.1  # entropy前的系数
+batch_size: 16384
+num_epochs: 100
+
+train_data_path: data/PP4a_episodes_datas_rtg_new.pt
+test_interval: 2
+save_interval: 10
+device: "cuda"
